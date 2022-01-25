@@ -1,24 +1,6 @@
 <template>
   <div id="app">
-    <header>
-      <h4>What are you looking for?</h4>
-      <div class="company-logo"></div>
-      <nav class="navbar">
-        <ul class="nav-items">
-          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Explre</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Listing</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">More</a></li>
-        </ul>
-      </nav>
-      <div class="sign-in">
-        <h4>Sign in or Register</h4>
-      </div>
-      <div class="menu-toggle">
-        <button>Add a Listing</button>
-      </div>
-    </header>
-  </div>
+    <Header />
   <Submenu />
   <Search />
   <br />
@@ -96,9 +78,11 @@
     image="http://main.mylistingtheme.com/wp-content/uploads/sites/6/2019/11/whereslugo-410902-unsplash.jpg"
   />
   </div>
+   </div>
 </template>
 
 <script>
+import Header from "./components/Header"
 import Submenu from "./components/Submenu";
 import Search from "./components/Search";
 import Card from "./components/Card";
@@ -106,6 +90,7 @@ import Card from "./components/Card";
 export default {
   name: "App",
   components: {
+    Header,
     Submenu,
     Search,
     Card,
@@ -114,11 +99,8 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (min-width: 800px) {
-  .container {
-    margin: 1em 2em;
-  }
-}
+
+
 *,
 *::before,
 *::after {
@@ -126,70 +108,25 @@ export default {
   margin: 0;
   box-sizing: border-box;
 }
+body{
+  background: ;
+
+}
+.card{
+display: inline;
+}
+
+
+@media screen and (min-width: 400px) {
+
+
 .card {
   display: grid;
    grid-template-columns: repeat(3, 1fr);
-  gap: px;
+  gap: 35px 1px;
+  margin-left: 35px;
+   transition: all 0.3s ease;
  }
-
-
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-
-body {
-  font-family: "Raleway", sans-serif;
-  font-size: 1rem;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #242429;
-  padding: 1rem 2rem;
-  height: 80px;
-}
-.company-logo {
-  font-size: 2.5rem;
-  color: #fff;
-}
-.nav-items {
-  display: flex;
-}
-.nav-item {
-  margin: 0 2rem;
-}
-.sign-in h4 {
-  color: #999;
-  font-size: 14px;
-}
-.nav-link {
-  font-size: 1.1rem;
-
-  position: relative;
-  color: #fff;
-  cursor: pointer;
-  transform-origin: bottom right;
-  transition: all 0.25s;
-}
-.nav-link:hover {
-  transition: all 0.25s;
-  cursor: pointer;
-}
-
-h4 {
-  color: #fff;
-  font-weight: 700;
-}
-button {
-  background: #fff;
-  color: blue;
-  padding: 20px 30px;
-  border-radius: 10px;
 }
 </style>
 

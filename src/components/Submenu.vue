@@ -52,7 +52,7 @@ nav a {
   color: #555;
   font-size: 1em;
   font-weight: 900;
-  
+  float: left;
 }
 nav :hover {
   border-bottom: 1px solid #6c1cff;
@@ -60,47 +60,37 @@ nav :hover {
   
 }
 
+@media (max-width: 40rem) {
 
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-body{
-  background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
+.container {
+   
+ 
+  margin: auto;
 }
 
-.search {
+nav {
+  
   width: 100%;
-  position: relative;
-  display: flex;
+  background: #fff;
+ box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  
 }
 
-.searchTerm {
-  width: 100%;
-  border: 1px solid #555;
-  border-right: none;
-  padding: 25px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
+nav a {
+  
+  text-decoration: none;
+  color: #555;
+  font-size: 10px;
+  font-weight: 900;
+   margin: auto;
+ 
+  padding: 0 5px;
 }
-
-.searchTerm:focus{
-  color: #00B4CC;
-}
+ 
+  }
 
 
 
-/*Resize the wrap to see the search bar change!*/
-.wrap{
-  width: 85%;
-  position: absolute;
-  top: px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-bottom: 40px;
-}
 
 
 </style>

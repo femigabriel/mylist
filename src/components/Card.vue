@@ -31,6 +31,7 @@ export default {
 </script>
 
 <style scoped>
+ 
 section {
 
 }
@@ -40,21 +41,33 @@ section {
   height: 25%;
   border-radius: 10px;
 }
-.background-label {
-  background: cornsilk;
-  width: 90%;
-}
+.background-label{
+    font-size: 8px;
+    background: goldenrod;
+  margin: 5px;
+   width: 90%;
+  height: 40%;
+  border-radius: 5px;
+  }
+
 
 .background-label h4 {
   font-weight: 700;
   font-size: 14px;
   color: #242429;
 }
-
-h6 {
-  font-size: 14px;
+h4 {
+   font-size: 14px;
   font-weight: 100;
   color: #242429;
+  margin: 5px;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 100;
+  color: #242429;
+  margin: 5px;
 }
 .logo img {
   width: 13%;
@@ -64,11 +77,44 @@ h6 {
 ol,
 ul {
   list-style-type: none;
-  padding: 5px;
-  transition: 0.5s;
+
+  
 }
 li {
-  
+  display: inline-flex;
   font-weight: 500;
+  color: #242429;
+  margin: 5px;
+}
+
+@media screen and (min-width: 400px) {
+  .background-label {
+  background: goldenrod;
+  width: 90%;
+  height: 40%;
+  border-radius: 10px;
+}
+h4 {
+  font-weight: 100;
+  
+}
+
+h6 {
+ font-weight: 100;
+ }
+
+
+ol,
+ul {
+  list-style-type: none;
+
+  
+}
+li {
+  display: inline-flex;
+  font-weight: 500;
+ 
+  margin: 5px;
+}
 }
 </style>
